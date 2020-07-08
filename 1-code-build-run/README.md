@@ -45,16 +45,18 @@ This demo illustrates how a web application can be implemented using Node.js, bu
 7. Push the Docker image to the `Container Registry`:
 
    ```bash
-   project_id=gdg-cloud-run # GCP project id
-   docker tag cloud-run-hello gcr.io/${project_id}/cloud-run-hello
-   docker push gcr.io/${project_id}/cloud-run-hello
+   PROJECT_ID="gdg-cloud-run" # GCP project id
+
+   docker tag cloud-run-hello gcr.io/${PROJECT_ID}/cloud-run-hello
+   docker push gcr.io/${PROJECT_ID}/cloud-run-hello
    ```
 
 8. Deploy web application on `Cloud Run`:
 
    ```bash
-   region="australia-southeast1" # Cloud run region
-   gcloud run --platform managed --region ${region} deploy --image gcr.io/${project_id}/cloud-run-hello
+   REGION="australia-southeast1" # Cloud run region
+
+   gcloud run --platform managed --region ${REGION} deploy --image gcr.io/${PROJECT_ID}/cloud-run-hello
    ```
 
 ## References:

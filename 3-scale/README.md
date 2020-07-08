@@ -28,7 +28,16 @@ This demo illustrates how Cloud Run applications scale according to incoming req
    });
    ```
 
-4. Generate a HTTP request load using the Loader test created and analyze the graph.
+4. Rollout above update:
+
+   ```bash
+   PROJECT_ID="gdg-cloud-run" # GCP project id
+   REGION="australia-southeast1" # Cloud run region
+
+   gcloud run --platform managed --region ${REGION} deploy --image gcr.io/${PROJECT_ID}/cloud-run-hello
+   ```
+
+5. Generate a HTTP request load using the Loader test created and analyze the graph.
 
 ## References
 

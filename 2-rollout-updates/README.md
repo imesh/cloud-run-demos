@@ -20,9 +20,10 @@ This demo explains how application updates can be rolled out without taking down
 2. Rollout above update:
 
    ```bash
-   project_id=gdg-cloud-run # GCP project id
-   region=australia-southeast1 # Cloud run region
-   gcloud run --platform managed --region ${region} deploy --image gcr.io/${project_id}/cloud-run-hello
+   PROJECT_ID="gdg-cloud-run" # GCP project id
+   REGION="australia-southeast1" # Cloud run region
+
+   gcloud run --platform managed --region ${REGION} deploy --image gcr.io/${PROJECT_ID}/cloud-run-hello
    ```
 
 3. Verify the update of the web application using the `Web Preview` option on the Cloud Shell.
