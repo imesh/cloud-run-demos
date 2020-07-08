@@ -19,32 +19,38 @@ This demo illustrates how a web application can be implemented using Node.js, bu
    server.listen(PORT, () => { console.log('Listening on port ' + PORT);});
    ```
 
-3. Click on the `Web Preview` button on the Cloud Shell UI and open above listener on the web browser.
+3. Start above web application on the `Cloud Shell Terminal`:
 
-4. Create a `Dockerfile` with the following content for packaging above web application in a Docker image:
-
+   ```bash
+   node server.js
    ```
+
+4. Click on the `Web Preview` button on the Cloud Shell UI and open above HTTP listener on the web browser.
+
+5. Create a `Dockerfile` with the following content for packaging above web application in a Docker image:
+
+   ```bash
    FROM node:12-slim
    ADD server.js /app/
    WORKDIR app/
    CMD node server.js
    ```
 
-5. Run the Docker image and verify the web application using the `Web Preview` option:
+6. Run the Docker image and verify the web application using the `Web Preview` option:
 
    ```bash
    docker run -p 8080:8080 -it cloud-run-hello
    ```
 
-6. Push the Docker image to the `Container Registry`:
+7. Push the Docker image to the `Container Registry`:
 
-   ```
+   ```bash
    project_id=gdg-cloud-run # GCP project id
    docker tag cloud-run-hello gcr.io/${project_id}/cloud-run-hello
    docker push gcr.io/${project_id}/cloud-run-hello
    ```
 
-7. Deploy web application on `Cloud Run`:
+8. Deploy web application on `Cloud Run`:
 
    ```bash
    region="australia-southeast1" # Cloud run region
