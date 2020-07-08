@@ -4,7 +4,7 @@ This demo explains how application updates can be rolled out without taking down
 
 ## Steps to Follow
 
-1. Update hello world message in the `server.js` file created in [Code Run & Build](../1-code-run-build) demo:
+1. Update hello world message in the `server.js` file created in [Code, Build & Run](../1-code-build-run) demo:
 
    ```js
    const http = require('http');
