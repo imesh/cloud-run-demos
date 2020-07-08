@@ -1,13 +1,15 @@
-# Cloud Run Demo 2 - Rollout updates
+# Cloud Run Demo 2 - Rollout Updates
 
 This demo explains how application updates can be rolled out without taking down time:
+
+## Steps to Follow
 
 1. Update hello world message in the `server.js` file created in [Code Run & Build](../1-code-run-build) demo:
 
    ```js
    const http = require('http');
    const server = http.createServer((req, res) => {
-       console.log('Incoming request: ' + req.url);
+       console.log('Request received: [url] ' + req.url);
        res.end('Hello world from Cloud Run!');
    });
 
@@ -24,3 +26,7 @@ This demo explains how application updates can be rolled out without taking down
    ```
 
 3. Verify the update of the web application using the `Web Preview` option on the Cloud Shell.
+
+## References
+
+- [gcloud run Command Reference](https://cloud.google.com/sdk/gcloud/reference/run)

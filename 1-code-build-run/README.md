@@ -11,7 +11,7 @@ This demo illustrates how a web application can be implemented using Node.js, bu
    ```js
    const http = require('http');
    const server = http.createServer((req, res) => {
-       console.log('Request received: ' + req.url);
+       console.log('Request received: [url] ' + req.url);
        res.end('Hello world!');
    });
 
