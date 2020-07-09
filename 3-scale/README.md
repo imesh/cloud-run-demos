@@ -28,16 +28,22 @@ This demo illustrates how Cloud Run applications scale according to incoming req
    });
    ```
 
-4. Rollout above update:
+4. Build and push Docker image to the Container Registry:
+
+   ```bash
+   docker build -t gcr.io/${PROJECT_ID}/cloud-run-hello .
+   docker push gcr.io/${PROJECT_ID}/cloud-run-hello
+   ```
+   
+5. Rollout above application update:
 
    ```bash
    PROJECT_ID="gdg-cloud-run" # GCP project id
    REGION="australia-southeast1" # Cloud run region
 
-   gcloud run --platform managed --region ${REGION} deploy --image gcr.io/${PROJECT_ID}/cloud-run-hello
+   gcloud run deploy cloud-run-hello --platform managed --region ${REGION} --image gcr.io/${PROJECT_ID}/cloud-run-hello --allow-unauthenticated
    ```
-
-5. Generate a HTTP request load using the Loader test created and analyze the graph.
+6. Generate a HTTP request load using the Loader test created and analyze the graph.
 
 ## References
 
