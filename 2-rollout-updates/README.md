@@ -17,7 +17,15 @@ This demo explains how application updates can be rolled out without taking down
    server.listen(PORT, () => { console.log('Listening on port ' + PORT);});
    ```
 
-2. Rollout above update:
+2. Build, tag and push Docker image to the Container Registry:
+
+   ```bash
+   docker build -t cloud-run-hello .
+   docker tag cloud-run-hello gcr.io/${PROJECT_ID}/cloud-run-hello
+   docker push gcr.io/${PROJECT_ID}/cloud-run-hello
+   ```
+   
+3. Rollout above application update:
 
    ```bash
    PROJECT_ID="gdg-cloud-run" # GCP project id
@@ -26,7 +34,7 @@ This demo explains how application updates can be rolled out without taking down
    gcloud run --platform managed --region ${REGION} deploy --image gcr.io/${PROJECT_ID}/cloud-run-hello
    ```
 
-3. Verify the update of the web application using the `Web Preview` option on the Cloud Shell.
+4. Verify the update of the web application using the `Web Preview` option on the Cloud Shell.
 
 ## References
 
