@@ -31,7 +31,7 @@ This demo explains how application updates can be rolled out without taking down
    PROJECT_ID="gdg-cloud-run" # GCP project id
    REGION="australia-southeast1" # Cloud run region
 
-   gcloud run --platform managed --region ${REGION} deploy --image gcr.io/${PROJECT_ID}/cloud-run-hello
+   gcloud run deploy cloud-run-hello --platform managed --region ${REGION} --image gcr.io/${PROJECT_ID}/cloud-run-hello --allow-unauthenticated
    ```
 
 4. Verify the update of the web application using the `Web Preview` option on the Cloud Shell.
