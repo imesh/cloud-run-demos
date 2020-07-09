@@ -38,7 +38,7 @@ This demo explains how Continuous Integration can be set up using Cloud Build fo
      args: ['push', 'gcr.io/gdg-cloud-run/cloud-run-hello:$COMMIT_SHA']
      # deploy application on cloud run
    - name: 'gcr.io/cloud-builders/gcloud'
-     args: ['run' , 'deploy', 'cloud-run-hello', '--platform', 'managed', '--region', 'australia-southeast1', '--image', 'gcr.io/gdg-cloud-run/cloud-run-hello:$COMMIT_SHA', '--allow-unauthenticated']
+     args: ['run' , 'deploy', 'cloud-run-hello', '--platform', 'managed', '--region', 'us-east1', '--image', 'gcr.io/gdg-cloud-run/cloud-run-hello:$COMMIT_SHA', '--allow-unauthenticated']
    ```
 
 4. Go to [Cloud Build](https://console.cloud.google.com/cloud-build/) UI and connect above Github repository to Cloud Build and create a [Push Trigger](https://console.cloud.google.com/cloud-build/triggers).
