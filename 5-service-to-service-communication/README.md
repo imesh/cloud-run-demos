@@ -1,5 +1,7 @@
 # Cloud Run Demo 5 - Service to Service Communication
 
+![](images/service-to-service.png)
+
 This demo shows how service to service integrations can be implemented while providing service level authentication using Cloud IAM (service accounts).
 
 ## Steps to Follow
