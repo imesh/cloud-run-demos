@@ -39,7 +39,7 @@ This demo shows how service to service integrations can be implemented while pro
 8. Now, grant permissions for `cloud-run-hello-web-app` to access `cloud-run-hello-api` by adding an IAM policy binding to the `cloud-run-hello-api`:
 
    ```bash
-   REGION="australia-southeast1"
+   REGION="us-east1"
    RECEIVING_SERVICE="cloud-run-hello-api"
    CALLING_SERVICE_IDENTITY="cloud-run-hello-web-app@gdg-cloud-run.iam.gserviceaccount.com"
 
