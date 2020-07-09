@@ -39,7 +39,7 @@ This demo illustrates how Cloud Run applications scale according to incoming req
 
    ```bash
    PROJECT_ID="gdg-cloud-run" # GCP project id
-   REGION="australia-southeast1" # Cloud run region
+   REGION="us-east1" # Cloud run region
 
    gcloud run deploy cloud-run-hello --platform managed --region ${REGION} --image gcr.io/${PROJECT_ID}/cloud-run-hello --allow-unauthenticated
    ```
