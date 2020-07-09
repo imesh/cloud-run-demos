@@ -17,11 +17,10 @@ This demo explains how application updates can be rolled out without taking down
    server.listen(PORT, () => { console.log('Listening on port ' + PORT);});
    ```
 
-2. Build, tag and push Docker image to the Container Registry:
+2. Build and push Docker image to the Container Registry:
 
    ```bash
-   docker build -t cloud-run-hello .
-   docker tag cloud-run-hello gcr.io/${PROJECT_ID}/cloud-run-hello
+   docker build -t gcr.io/${PROJECT_ID}/cloud-run-hello .
    docker push gcr.io/${PROJECT_ID}/cloud-run-hello
    ```
    
