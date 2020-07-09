@@ -51,7 +51,7 @@ This demo shows how service to service integrations can be implemented while pro
 9. Re-deploy `cloud-run-hello-web-app` to refresh its state:
 
    ```bash
-   REGION="australia-southeast1"
+   REGION="us-east1"
    HELLO_API_URL=#cloud-run-hello-api service URL
 
    gcloud run deploy cloud-run-hello-web-app --platform managed --region ${REGION} --image gcr.io/gdg-cloud-run/cloud-run-hello-web-app:latest --set-env-vars HELLO_API_URL=${HELLO_API_URL} --service-account cloud-run-hello-web-app --allow-unauthenticated
