@@ -60,7 +60,7 @@ This demo illustrates how a web application can be implemented using Node.js, bu
 9. Deploy web application on `Cloud Run`:
 
    ```bash
-   REGION="australia-southeast1" # Cloud run region
+   REGION="us-east1" # Cloud run region
    
    gcloud config set project ${PROJECT_ID}
    gcloud run deploy cloud-run-hello --platform managed --region ${REGION} --image gcr.io/${PROJECT_ID}/cloud-run-hello --allow-unauthenticated
