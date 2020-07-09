@@ -36,13 +36,19 @@ This demo illustrates how a web application can be implemented using Node.js, bu
    CMD node server.js
    ```
 
-6. Run the Docker image and verify the web application using the `Web Preview` option:
+6. Build the Docker image:
+
+   ```bash
+   docker build -t cloud-run-hello .
+   ```
+   
+7. Run the Docker image and verify the web application using the `Web Preview` option:
 
    ```bash
    docker run -p 8080:8080 -it cloud-run-hello
    ```
 
-7. Push the Docker image to the `Container Registry`:
+8. Push the Docker image to the `Container Registry`:
 
    ```bash
    PROJECT_ID="gdg-cloud-run" # GCP project id
@@ -51,7 +57,7 @@ This demo illustrates how a web application can be implemented using Node.js, bu
    docker push gcr.io/${PROJECT_ID}/cloud-run-hello
    ```
 
-8. Deploy web application on `Cloud Run`:
+9. Deploy web application on `Cloud Run`:
 
    ```bash
    REGION="australia-southeast1" # Cloud run region
