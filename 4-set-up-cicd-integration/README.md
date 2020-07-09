@@ -60,7 +60,7 @@ This demo explains how Continuous Integration can be set up using Cloud Build fo
 
 7. Verify the build in [Cloud Build](https://console.cloud.google.com/cloud-build/) UI.
 
-8. If the build is successful, verify the update of the web application using the `Web Preview` option on the Cloud Shell.
+8. If the build is successful, verify the update of the web application using the public endpoint URL.
 
 ## References
 - [Cloud Build Configuration Overview](https://cloud.google.com/cloud-build/docs/build-config)
