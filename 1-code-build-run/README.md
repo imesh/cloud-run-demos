@@ -61,8 +61,9 @@ This demo illustrates how a web application can be implemented using Node.js, bu
 
    ```bash
    REGION="australia-southeast1" # Cloud run region
-
-   gcloud run --platform managed --region ${REGION} deploy --image gcr.io/${PROJECT_ID}/cloud-run-hello
+   
+   gcloud config set project ${PROJECT_ID}
+   gcloud run deploy cloud-run-hello --platform managed --region ${REGION} --image gcr.io/${PROJECT_ID}/cloud-run-hello --allow-unauthenticated
    ```
 
 ## References:
