@@ -10,6 +10,8 @@ This repository contains a collection of demos for getting started with [Cloud R
 
 ## Dependent Git Repositories
 
+The following git repositories are used by the [Service to Service Communication](/5-service-to-service-communication) demo:
+
 - [Cloud Run Hello Web App](https://github.com/imesh/cloud-run-hello-web-app)
 - [Cloud Run Hello API](https://github.com/imesh/cloud-run-hello-api)
 
